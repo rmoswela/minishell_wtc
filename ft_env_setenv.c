@@ -6,7 +6,7 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/17 00:36:15 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/29 21:51:25 by                  ###   ########.fr       */
+/*   Updated: 2016/11/30 02:29:05 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void		ft_unsetenv (char *name)
 	while (environ[size] != '\0')
 		size++;
 	my_env = (char **)malloc(sizeof(char *) * size + 1);
-
 	loop = 0;
 	while (environ[loop] != '\0')
 	{
@@ -35,6 +34,7 @@ void		ft_unsetenv (char *name)
 		loop++;
 	}
 	environ = my_env;
+	//free(my_env);
 }
 
 char	**ft_env ()
@@ -91,7 +91,6 @@ void		ft_setenv (char *name, char *value, char *overwrite)
 
 	my_env = ft_env();
 	loop = 0;
-
 	while (environ[loop] != '\0')
 	{
 		if (ft_strncmp(my_env[loop], name, ft_strlen(name)) == 0 \
