@@ -6,7 +6,7 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/07 14:02:36 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/29 19:54:19 by                  ###   ########.fr       */
+/*   Updated: 2016/11/30 02:13:21 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ void		ft_handleExecution(char **args)
 	char 	*path;
 
 	path = ft_check_path(*args);
+	//ft_putstr("eita\n");
+	//ft_putchar('\n');
 	ft_execute(path, args);
 }
 
 void		ft_handleArgs(char **args, char *line)
 {
-	args = ft_strsplit(line, ' ');
+	//args = ft_strsplit(line, ' ');
 	if (ft_strcmp(*args, "exit") == 0)
 		exit(0);
 	else if (ft_strcmp(*args, "echo") == 0)
