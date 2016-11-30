@@ -6,7 +6,7 @@
 /*   By: rmoswela <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/10 18:26:46 by rmoswela          #+#    #+#             */
-/*   Updated: 2016/11/29 21:17:45 by                  ###   ########.fr       */
+/*   Updated: 2016/11/29 22:47:28 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void	ft_double_output_redirect (char *str);
 void	ft_input_redirection (char *str);
 void	ft_double_input_redict (char *str);
 void	ft_execute(char *str, char **args);
+void	ft_handleExecution(char **args);
 
 # endif
